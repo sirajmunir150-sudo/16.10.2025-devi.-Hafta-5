@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS ve Liste Uygulaması</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>CSS ve Liste Kullanarak 3 Uygulama</h1>
+  </header>
+
+  <nav class="sidebar">
+    <ul>
+      <li><a href="#">Ana Sayfa</a></li>
+      <li><a href="#">Ürünler</a></li>
+      <li><a href="#">Hakkında</a></li>
+      <li><a href="#">İletişim</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="image-section">
+      <img id="mainImage" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="Büyük Resim">
+
+      <div class="thumbnail-container">
+        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" alt="Bilgisayar" onclick="changeImage(this)">
+        <img src="https://images.unsplash.com/photo-1512499617640-c2f999098c01" alt="Telefon" onclick="changeImage(this)">
+        <img src="https://images.unsplash.com/photo-1583229817033-8ab3e67bcdab" alt="Ayakkabı" onclick="changeImage(this)">
+      </div>
+    </section>
+
+    <section class="tabs">
+      <div class="tab-buttons">
+        <button onclick="openTab('info')">Bilgi</button>
+        <button onclick="openTab('gallery')">Galeri</button>
+        <button onclick="openTab('contact')">İletişim</button>
+      </div>
+
+      <div class="tab-content" id="info">
+        <p>Bu sayfa, HTML ve CSS kullanarak liste ve sekme uygulaması örneğidir.</p>
+      </div>
+
+      <div class="tab-content" id="gallery" style="display:none;">
+        <p>Burada örnek ürün görselleri bulunmaktadır.</p>
+      </div>
+
+      <div class="tab-content" id="contact" style="display:none;">
+        <p>İletişim için: <a href="mailto:example@email.com">example@email.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
